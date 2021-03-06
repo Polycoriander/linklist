@@ -36,7 +36,7 @@ void displayList(list List)
     Node *pNode = List;
     while(pNode != NULL)
     {
-        printf("%d ", pNode -> item);
+        printf("%-4d", pNode -> item);
         pNode = pNode -> next;
     }
     printf("\n");

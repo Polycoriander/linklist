@@ -37,13 +37,17 @@ int main( void )
     position = rand() % (SIZE + 1) + 1;
     printf("deletePosition: %d\n", position);
     myList = deleteList(&myList, data, position);
-    printf("InsertList\n");
+    printf("InsertList:\n");
     displayList(myList);
 
     //traverse
-    traverse(&myList, pFun[0]);
-    displayList(myList);
-    
+    for(i = 0; i < 2; i++)
+    {
+        traverse(&myList, pFun[i]);
+        printf("pFun%d:\n", i + 1);
+        displayList(myList);
+    }
+
     //free
     freeList(&myList);
     return 0;
